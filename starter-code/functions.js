@@ -64,7 +64,7 @@ return sum;
 
 
 function multiplyArray(myArray) {
-var prod = 0; 
+var prod = 0;
 for (var i = 0; i < myArray.length; i++) {
   prod *= arr[i];
 }
@@ -72,79 +72,46 @@ return prod;
 }
 
 
+//Write a function that return the number of arguments passed to the function when called.
+// Question 5
+// I have no idea how to do this one :)
 
-
-// Write a function that return the number of arguments passed to the function when called.
-
-// Question 4
-function multiplyArray() {
-
+var numberOfArguments = function(){
+  return args.length
 }
 
+// Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar")
+// should return the string "ratset gaj".
 
 
-
-
-
-
-
-
-
-
-
+function reverse(string) {
+  var newString = '';
+  for (var i = string.length - 1; i >= 0; i--)
+    newString += string[i];
+  return newString;
+}
 
 // Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
-// Question 5
-var numberOfArguments = function(){
-
+function findLongestWord (array) {
+  longest = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].length > longest) {
+      longest = arr[i].length;
+    }
+  }
+  return longest;
 }
 
-// Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
-// Bonus
+// Write a function filterLongWords that takes an array of words and a number i and returns the array
+// of words that are longer than i characters long.
 
-// Question 6
-var reverseString = function (){
-
-};
-
-// Add a method reverseString (from question 6) to the object String so that it is possible to
-// call: "General Assembly".reverseString().
-
-// Question 7
-function findLongestWord () {
-
-}
-
-// Write a function that takes a string as argument and returns an object where:
-// the keys are the characters that occur in the string
-// the values are the number of occurences for each letter, regardless of the case
-// For example, calling the function with the string "General Assembly" will return:
-//
-// {
-//   a: 2,
-//   b: 1,
-//   e: 3,
-//   g: 1,
-//   l: 2,
-//   m: 1,
-//   n: 1,
-//   r: 1,
-//   s: 2,
-//   y: 1
-// }
-
-// Question 8
-function filterLongWords () {
-
-}
-
-
-// Bonus 1
-// (hint: `prototype`)
-
-
-// Bonus 2
-function charactersOccurencesCount() {
-
+function filterLongWords (array, num) {
+  var newArray = [];
+  for (var i = 0, i < array.length, i++) {
+    if (array[i].length > num){
+    newArray.push(array[i]);
+    }
+  }
+return newArray;
 }
